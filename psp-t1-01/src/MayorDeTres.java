@@ -22,8 +22,19 @@ public class MayorDeTres {
                 mayor = num3;
             }
 
+            int i = 1;
+
+            // Bucle para indicar los argumentos
+            for (String arg : args) {
+
+                System.out.println("Argumento " + i++ + " es: " + arg);
+
+            }
+
+            System.out.println("- - - - - - - - - -");
+
             // Imprimimos por pantalla el número mayor
-            System.out.println("Número Mayor: " + mayor);
+            System.out.println("Argumento Mayor: " + mayor);
 
         } catch (NumberFormatException e) {
             System.out.println("ERROR, Debes ingresar números enteros OBLIGATORIAMENTE.");
