@@ -2,7 +2,7 @@ public class MayorDeTres {
     public static void main(String[] args) {
         // Sí o sí tienen que haber 3 argumentos introducidos
         if (args.length != 3) {
-            System.out.println("ERROR, debe ingresar 3 números como argumentos.");
+            System.out.println("ERROR, Debes ingresar 3 números enteros como argumentos.");
             return;
         }
 
@@ -26,7 +26,7 @@ public class MayorDeTres {
             System.out.println("Número Mayor: " + mayor);
 
         } catch (NumberFormatException e) {
-            System.out.println("ERROR, ingresa número válidos.");
+            System.out.println("ERROR, Debes ingresar números enteros OBLIGATORIAMENTE.");
         }
     }
 }
