@@ -7,21 +7,23 @@ public class tarea1 {
             return;
         }
 
-        String mode = args[0];
-        String program = args[1];
+        String ejecProcesos = args[0];
+        String programa = args[1];
 
         // Ruta del Chrome
         String rutaChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 
+        // Si es P o R, ejecuta un proceso u otro
         try {
-            if ("P".equalsIgnoreCase(mode)) {
+            if ("P".equalsIgnoreCase(ejecProcesos)) {
 
-                if ("C".equalsIgnoreCase(program)) {
+                // Si es N o C, ejecuta un programa u otro
+                if ("N".equalsIgnoreCase(programa)) {
                     // ProcessBuilder Notepad
                     ProcessBuilder processBuilder = new ProcessBuilder("notepad.exe");
                     Process process = processBuilder.start();
                     process.waitFor();
-                } else if ("N".equalsIgnoreCase(program)) {
+                } else if ("C".equalsIgnoreCase(programa)) {
                     // ProcessBuilder Chrome
                     ProcessBuilder processBuilder = new ProcessBuilder(rutaChrome);
                     Process process = processBuilder.start();
@@ -30,14 +32,15 @@ public class tarea1 {
                     System.out.println("ERROR, El segundo argumento debe ser C o N");
                 }
 
-            } else if ("R".equalsIgnoreCase(mode)) {
+            } else if ("R".equalsIgnoreCase(ejecProcesos)) {
 
-                if ("C".equalsIgnoreCase(program)) {
+                // Si es N o C, ejecuta un programa u otro
+                if ("N".equalsIgnoreCase(programa)) {
                     // Runtime Notepad
                     Runtime runtime = Runtime.getRuntime();
                     Process process = runtime.exec("notepad.exe");
                     process.waitFor();
-                } else if ("N".equalsIgnoreCase(program)) {
+                } else if ("C".equalsIgnoreCase(programa)) {
                     // Runtime Chrome
                     Runtime runtime = Runtime.getRuntime();
                     Process process = runtime.exec(rutaChrome);
