@@ -7,7 +7,7 @@ public class MayorDeTres {
         }
 
         try {
-            // Convertir los argumentos a enteros
+            // Convertimos los argumentos a enteros
             int num1 = Integer.parseInt(args[0]);
             int num2 = Integer.parseInt(args[1]);
             int num3 = Integer.parseInt(args[2]);
